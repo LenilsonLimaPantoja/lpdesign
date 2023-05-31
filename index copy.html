@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Silicon | Blog Homepage</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Silicon - Multipurpose Technology Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon and Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://silicon.createx.studio/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://silicon.createx.studio/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://silicon.createx.studio/assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://silicon.createx.studio/assets/favicon/site.webmanifest"
+    />
+    <link
+      rel="mask-icon"
+      href="https://silicon.createx.studio/assets/favicon/safari-pinned-tab.svg"
+      color="#6366f1"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://silicon.createx.studio/assets/favicon/favicon.ico"
+    />
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta
+      name="msapplication-config"
+      content="https://silicon.createx.studio/assets/favicon/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Vendor Styles -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://silicon.createx.studio/assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://silicon.createx.studio/assets/vendor/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://silicon.createx.studio/assets/css/theme.min.css"
+    />
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== null && mode === "dark") {
+        root.classList.add("dark-mode");
+      } else {
+        root.classList.remove("dark-mode");
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WKV3GT5");
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe
+        src="//www.googletagmanager.com/ns.html?id=GTM-WKV3GT5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+
+      <!-- Hero -->
+
+      <!-- Popular posts (Carousel) -->
+      <section class="bg-secondary py-5 mb-lg-5">
+        <div class="container pt-2 pt-lg-4 pt-xl-5">
+          <h2 class="h1 mb-4 pb-lg-3 pt-lg-1 pb-1 text-center">
+            Popular Posts
+          </h2>
+        </div>
+        <div class="pb-lg-5 mb-xl-3">
+          <div
+            class="swiper"
+            data-swiper-options='{
+            "slidesPerView": 1,
+            "centeredSlides": true,
+            "loop": true,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "0": {
+                "slidesPerView": 1
+              },
+              "576": {
+                "slidesPerView": 2
+              },
+              "768": {
+                "slidesPerView": 3
+              },
+              "1200": {
+                "slidesPerView": 4
+              }
+            }
+          }'
+          >
+            <div class="swiper-wrapper">
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/01.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/02.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/03.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/04.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+                </article>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/05.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/06.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+              </div>
+
+              <!-- Item -->
+              <div class="swiper-slide h-auto px-2">
+                <article class="card border-0 h-100 mx-1">
+                  <div class="position-relative">
+                    <a
+                      href="blog-single.html"
+                      class="position-absolute top-0 start-0 w-100 h-100"
+                      aria-label="Read more"
+                    ></a>
+                    <img
+                      src="https://silicon.createx.studio/assets/img/blog/07.jpg"
+                      class="card-img-top"
+                      alt="Image"
+                    />
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Pagination (bullets) -->
+            <div
+              class="swiper-pagination position-relative pt-1 pt-sm-3 mt-5 d-xl-none d-flex"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest posts -->
+
+      <!-- Latest podcasts -->
+
+      <!-- Subscription CTA -->
+    </main>
+    <script src="https://silicon.createx.studio/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://silicon.createx.studio/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="https://silicon.createx.studio/assets/js/theme.min.js"></script>
+  </body>
+</html>
