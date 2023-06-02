@@ -19,16 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon and Touch Icons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/assets/img/logo.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/assets/img/logo.png"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/logo.png" />
+    <link rel="icon" type="image/png" href="/assets/img/logo.png" />
     <link
       rel="icon"
       type="image/png"
@@ -44,10 +36,7 @@
       href="https://silicon.createx.studio/assets/favicon/safari-pinned-tab.svg"
       color="#6366f1"
     />
-    <link
-      rel="shortcut icon"
-      href="/assets/img/logo.png"
-    />
+    <link rel="shortcut icon" href="/assets/img/logo.png" />
     <meta name="msapplication-TileColor" content="#080032" />
     <meta
       name="msapplication-config"
@@ -208,7 +197,25 @@
     src="https://kit.fontawesome.com/484246aeda.js"
     crossorigin="anonymous"
   ></script>
-
+  <style>
+    section div div #personalizado {
+      transform: translateX(100%);
+    }
+    .logo {
+      width: 200px;
+    }
+    .imgLogo {
+      width: 250px;
+    }
+    @media (max-width: 768px) {
+      .logo {
+        width: 150px;
+      }
+      .imgLogo {
+        width: 200px;
+      }
+    }
+  </style>
   <!-- Body -->
   <body>
     <!-- Google Tag Manager (noscript)-->
@@ -235,7 +242,7 @@
       >
         <div class="container px-3 d-flex">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="/assets/img/logoBranca.png" width="200" alt="Silicon" />
+            <img src="/assets/img/logoBranca.png" class="logo" alt="Silicon" />
           </a>
         </div>
       </header>
@@ -263,7 +270,12 @@
             >
               personalizado
             </p> -->
-            <img src="assets/img/orcamento.png" alt="" srcset="" width="250" />
+            <img
+              src="assets/img/orcamento.png"
+              alt=""
+              srcset=""
+              class="imgLogo"
+            />
           </div>
           <p
             class="mb-4 mx-auto pb-3 fs-lg text-center"
@@ -457,7 +469,11 @@
             <div
               class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4 justify-content-center justify-content-md-start"
             >
-              <img src="/assets/img/logoBranca.png" width="200" alt="Silicon" />
+              <img
+                src="/assets/img/logoBranca.png"
+                class="logo"
+                alt="Silicon"
+              />
             </div>
             <p class="fs-sm pb-lg-3 mb-4 text-light text-center text-md-start">
               Razão Social: Pontual Serviços Neon Com Materiais Eletricos Ltda.

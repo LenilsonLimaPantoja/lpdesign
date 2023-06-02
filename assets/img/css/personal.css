@@ -1,3 +1,9 @@
 section div div #personalizado{
     transform: translateX(100%);
 }
+@media (max-width: 768px){
+    .logo{
+        width: 150px;
+    }
+    
+}
